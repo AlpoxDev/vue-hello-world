@@ -1,7 +1,14 @@
 .todoList {
   .todoItem {
-    &.isActive {
-      color: red;
+    line-height: 24px;
+
+    &.isCompleted {
+      background-color: #999;
+    }
+
+    &.isSelected {
+      background-color: red;
+      color: white;
     }
   }
 

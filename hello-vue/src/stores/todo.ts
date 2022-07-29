@@ -17,9 +17,15 @@ export const useTodo = () => {
       .then((res) => res.data)
   );
 
+  const handleSelectedTodo = (todo: any) => {
+    console.log(`selectedTodo`, todo);
+    state.selectedTodo = todo;
+  };
+
   return {
     todos,
     ...toRefs(state),
     ...rest,
+    handleSelectedTodo,
   };
 };

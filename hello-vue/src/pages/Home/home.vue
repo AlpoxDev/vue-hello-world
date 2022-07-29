@@ -10,9 +10,13 @@
   <ul class="todoList">
     <li
       class="todoItem"
-      v-bind:class="{ isActive: index % 2 === 0 }"
-      v-for="(todo, index) in todos"
+      v-bind:class="{
+        isSelected: selectedTodo?.id === todo.id,
+        isCompleted: todo.completed,
+      }"
+      v-for="todo in todos"
       :key="todo.id"
+      @click="() => handleSelectedTodo(todo)"
     >
       {{ todo.id }}: {{ todo.title }}
     </li>

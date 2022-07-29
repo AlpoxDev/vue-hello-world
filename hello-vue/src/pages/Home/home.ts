@@ -1,5 +1,5 @@
 import { defineComponent } from "vue";
-import { useTodo } from "@/stores";
+import { useTodo } from "../../stores";
 
 export default defineComponent({
   name: "page-home",
@@ -9,12 +9,7 @@ export default defineComponent({
     };
   },
   setup() {
-    const { todos, isLoading } = useTodo();
-
-    return {
-      todos,
-      isLoading,
-    };
+    return useTodo();
   },
   methods: {
     increaseCounter() {
