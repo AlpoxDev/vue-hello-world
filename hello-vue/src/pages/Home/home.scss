@@ -1,0 +1,11 @@
+.todoList {
+  .todoItem {
+    &.isActive {
+      color: red;
+    }
+  }
+
+  .todoItem + .todoItem {
+    margin-top: 8px;
+  }
+}
